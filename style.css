@@ -1,0 +1,466 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+
+    background-image:url("./Vector.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-color:#000;
+
+    font-family:Georgia, serif;
+}
+
+#screen{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+/* Senha */
+
+.password-display{
+    position:absolute;
+    top:55%;
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+
+    font-size:1.5rem;
+    letter-spacing:4px;
+
+    z-index:10;
+}
+
+/* Teclado */
+
+.keypad{
+    position:absolute;
+    bottom:20px;
+    width:100%;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+
+    padding:0 55px;
+}
+
+.keypad button{
+    width:55px;
+    height:55px;
+
+    margin:auto;
+
+    border:none;
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(8px);
+
+    color:white;
+
+    font-size:1.3rem;
+    font-weight:300;
+
+    transition:.15s;
+}
+
+.keypad button:hover{
+    background:rgba(255,255,255,.15);
+}
+
+.keypad button:active{
+    transform:scale(.92);
+}
+
+/* Animações da tela da senha */
+
+.fade-out{
+    animation:fadeOut .8s forwards;
+}
+
+.shake{
+    animation:shake .4s;
+}
+
+@keyframes fadeOut{
+    from{
+        opacity:1;
+    }
+
+    to{
+        opacity:0;
+    }
+}
+
+@keyframes shake{
+    0%{
+        transform:translateX(0);
+    }
+
+    25%{
+        transform:translateX(-6px);
+    }
+
+    50%{
+        transform:translateX(6px);
+    }
+
+    75%{
+        transform:translateX(-6px);
+    }
+
+    100%{
+        transform:translateX(0);
+    }
+}
+
+/* ===================================== */
+/* SEGUNDA PÁGINA */
+/* ===================================== */
+
+.second-page{
+    width:100%;
+    height:100vh;
+
+    position:relative;
+    overflow:hidden;
+
+    background:#000;
+    color:white;
+}
+
+.fixed-van-gogh-bg{
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    background-color:#000;
+    background-image:url("./vangogh.png");
+    background-size:cover;
+    background-position:center top;
+    background-repeat:no-repeat;
+
+    z-index:0;
+}
+
+.second-page-scroll{
+    position:absolute;
+    inset:0;
+
+    z-index:2;
+
+    width:100%;
+    height:100%;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    -webkit-overflow-scrolling:touch;
+
+    transition:.35s ease;
+}
+
+.second-page-scroll.blurred{
+    filter:blur(7px);
+    pointer-events:none;
+}
+
+/* Linha vermelha */
+
+.red-line{
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:auto;
+
+    z-index:1;
+
+    pointer-events:none;
+
+    opacity:.9;
+}
+
+/* Primeira seção: música */
+
+.music-section{
+    position:relative;
+    z-index:3;
+
+    min-height:800px;
+
+    padding:67px 47px 40px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.vinyl{
+    width:190px;
+    height:190px;
+
+    object-fit:contain;
+
+    margin-bottom:30px;
+
+    animation:vinylSpin 4s linear infinite;
+
+    filter:drop-shadow(0 8px 18px rgba(0,0,0,.7));
+}
+
+.song-text{
+    width:100%;
+
+    font-size:14px;
+    line-height:1.18;
+
+    text-align:left;
+
+    color:white;
+
+    text-shadow:0 2px 7px rgba(0,0,0,.9);
+}
+
+.song-text p{
+    margin-bottom:23px;
+}
+
+/* Segunda seção: memórias */
+
+.memories-section{
+    position:relative;
+    z-index:3;
+
+    min-height:620px;
+
+    padding:0;
+
+    background:transparent;
+}
+
+.memories-composition{
+    position:relative;
+
+    width:390px;
+    max-width:100%;
+    height:620px;
+
+    margin:0 auto;
+}
+
+/* Foto 1 */
+
+.photo-one{
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:150px;
+    height:auto;
+
+    z-index:4;
+}
+
+/* Texto superior */
+
+.text-one{
+    position:absolute;
+
+    top:50px;
+    left:170px;
+
+    width:205px;
+
+    z-index:8;
+
+    color:white;
+
+    font-size:14px;
+    line-height:1.18;
+    font-weight:400;
+
+    text-shadow:0 2px 7px rgba(0,0,0,.95);
+}
+
+/* Envelope */
+
+.envelope-button{
+    position:absolute;
+
+    top:100px;
+
+    width:372px;
+
+    border:0 !important;
+    outline:none !important;
+    background:transparent !important;
+    box-shadow:none !important;
+    padding:0;
+    margin:0;
+
+    appearance:none;
+    -webkit-appearance:none;
+
+    cursor:pointer;
+
+    transform:rotate(-13deg);
+    transform-origin:center center;
+
+    z-index:7;
+
+    transition:.25s ease;
+}
+
+.envelope-button img{
+    width:100%;
+    display:block;
+
+    filter:drop-shadow(0 12px 20px rgba(0,0,0,.78));
+}
+
+/* Texto inferior esquerdo */
+
+.text-two{
+    position:absolute;
+
+    top:460px;
+    left:18px;
+
+    width:230px;
+
+    z-index:8;
+
+    color:white;
+
+    font-size:14px;
+    line-height:1.18;
+    font-weight:400;
+
+    text-shadow:0 2px 7px rgba(0,0,0,.95);
+}
+/* Foto 2 */
+
+.photo-two{
+    position:absolute;
+
+    top:385px;
+    right:-18px;
+
+    width:150px;
+    height:auto;
+
+    z-index:6;
+
+    transform:rotate(1deg);
+}
+
+/* Terceira seção: final */
+
+.ending-section{
+    position:relative;
+    z-index:3;
+
+    min-height:760px;
+
+    padding-top:40px;
+
+    background:transparent;
+}
+
+.ending-image{
+    width:100%;
+    max-width:430px;
+
+    display:block;
+
+    margin:0 auto;
+}
+
+/* Modal da carta */
+
+.letter-modal{
+    position:fixed;
+    inset:0;
+
+    z-index:50;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+    pointer-events:none;
+
+    transition:.35s ease;
+}
+
+.letter-modal.active{
+    opacity:1;
+    pointer-events:auto;
+}
+
+.letter-backdrop{
+    position:absolute;
+    inset:0;
+
+    background:rgba(0,0,0,.58);
+}
+
+.letter-box{
+    position:relative;
+    z-index:2;
+
+    width:92%;
+    max-width:390px;
+
+    animation:letterOpen .45s ease forwards;
+}
+
+.letter-box img{
+    width:100%;
+    display:block;
+
+    filter:drop-shadow(0 12px 25px rgba(0,0,0,.75));
+}
+
+/* Animações da segunda página */
+
+@keyframes vinylSpin{
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes letterOpen{
+    from{
+        opacity:0;
+        transform:scale(.78) rotate(-3deg);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1) rotate(0);
+    }
+}
