@@ -436,32 +436,51 @@ body{
 
 /* Ajuste final da tela de senha */
 
+/* Ajuste final da tela inicial */
+
 .password-display{
-    top:40% !important;
-    font-size:1.15rem !important;
+    position:absolute !important;
+
+    top:43% !important;
+    left:50% !important;
+
+    width:auto !important;
+
+    transform:translateX(-50%) !important;
+
+    font-size:1.05rem !important;
     letter-spacing:5px !important;
+
+    z-index:20 !important;
 }
 
 .keypad{
-    top:40% !important;
-    bottom:auto !important;
+    position:absolute !important;
+
+    top:48% !important;
+    left:50% !important;
+
+    width:auto !important;
+
+    transform:translateX(-50%) !important;
 
     display:grid !important;
-    grid-template-columns:repeat(3,40px) !important;
+    grid-template-columns:repeat(3,42px) !important;
 
-    justify-content:center !important;
-
-    column-gap:16px !important;
-    row-gap:7px !important;
+    column-gap:18px !important;
+    row-gap:8px !important;
 
     padding:0 !important;
+    bottom:auto !important;
+
+    z-index:20 !important;
 }
 
 .keypad button{
-    width:40px !important;
-    height:40px !important;
+    width:42px !important;
+    height:42px !important;
 
     margin:0 !important;
 
-    font-size:.95rem !important;
+    font-size:1rem !important;
 }
