@@ -24,50 +24,6 @@ body{
     position:relative;
 }
 
-/* Senha */
-
-.password-display{
-    position:absolute;
-
-    top:47%;
-
-    width:100%;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    color:white;
-
-    font-size:1.2rem;
-    letter-spacing:5px;
-
-    z-index:10;
-}
-
-/* Teclado */
-
-.keypad{
-    position:absolute;
-
-    top:53%;
-
-    width:100%;
-
-    display:grid;
-
-    grid-template-columns:repeat(3,40px);
-
-    justify-content:center;
-
-    column-gap:18px;
-    row-gap:7px;
-
-    padding:0;
-
-    z-index:10;
-}
-
 .keypad button{
     width:40px;
     height:40px;
@@ -481,13 +437,13 @@ body{
 /* Ajuste final da tela de senha */
 
 .password-display{
-    top:56% !important;
+    top:72% !important;
     font-size:1.15rem !important;
     letter-spacing:5px !important;
 }
 
 .keypad{
-    top:60% !important;
+    top:70% !important;
     bottom:auto !important;
 
     display:grid !important;
