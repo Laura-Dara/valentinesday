@@ -47,7 +47,7 @@ body{
 
 .keypad{
     position:absolute;
-    top:54%;
+    top:40%;
     width:100%;
 
     display:grid;
