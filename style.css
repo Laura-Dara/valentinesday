@@ -434,14 +434,12 @@ body{
     }
 }
 
-/* Ajuste final da tela de senha */
-
 /* Ajuste final da tela inicial */
 
 .password-display{
     position:absolute !important;
 
-    top:43% !important;
+    top:51% !important;
     left:50% !important;
 
     width:auto !important;
@@ -457,7 +455,7 @@ body{
 .keypad{
     position:absolute !important;
 
-    top:48% !important;
+    top:57% !important;
     left:50% !important;
 
     width:auto !important;
@@ -465,10 +463,10 @@ body{
     transform:translateX(-50%) !important;
 
     display:grid !important;
-    grid-template-columns:repeat(3,42px) !important;
+    grid-template-columns:repeat(3,40px) !important;
 
-    column-gap:18px !important;
-    row-gap:8px !important;
+    column-gap:16px !important;
+    row-gap:7px !important;
 
     padding:0 !important;
     bottom:auto !important;
@@ -477,10 +475,10 @@ body{
 }
 
 .keypad button{
-    width:42px !important;
-    height:42px !important;
+    width:40px !important;
+    height:40px !important;
 
     margin:0 !important;
 
-    font-size:1rem !important;
+    font-size:.95rem !important;
 }
