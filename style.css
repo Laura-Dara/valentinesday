@@ -439,25 +439,41 @@ body{
 .password-display{
     position:absolute !important;
 
-    top:55% !important;
+    top:59% !important;
     left:50% !important;
 
     width:auto !important;
 
     transform:translateX(-50%) !important;
 
-    color:white !important;
-
-    font-size:1.05rem !important;
-    letter-spacing:5px !important;
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    gap:14px !important;
 
     z-index:20 !important;
+}
+
+.dot{
+    width:10px !important;
+    height:10px !important;
+
+    display:block !important;
+
+    border:1.5px solid white !important;
+    border-radius:50% !important;
+
+    background:transparent !important;
+}
+
+.dot.filled{
+    background:white !important;
 }
 
 .keypad{
     position:absolute !important;
 
-    top:62% !important;
+    top:67% !important;
     left:50% !important;
 
     width:auto !important;
