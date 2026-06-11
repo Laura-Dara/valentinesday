@@ -28,7 +28,7 @@ body{
 
 .password-display{
     position:absolute;
-    top:46%;
+    top:54%;
     width:100%;
 
     display:flex;
@@ -47,7 +47,7 @@ body{
 
 .keypad{
     position:absolute;
-    top:40%;
+    top:50%;
     width:100%;
 
     display:grid;
