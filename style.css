@@ -437,13 +437,13 @@ body{
 /* Ajuste final da tela de senha */
 
 .password-display{
-    top:72% !important;
+    top:40% !important;
     font-size:1.15rem !important;
     letter-spacing:5px !important;
 }
 
 .keypad{
-    top:70% !important;
+    top:40% !important;
     bottom:auto !important;
 
     display:grid !important;
