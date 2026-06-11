@@ -481,13 +481,13 @@ body{
 /* Ajuste final da tela de senha */
 
 .password-display{
-    top:49% !important;
+    top:56% !important;
     font-size:1.15rem !important;
     letter-spacing:5px !important;
 }
 
 .keypad{
-    top:56% !important;
+    top:60% !important;
     bottom:auto !important;
 
     display:grid !important;
