@@ -439,12 +439,14 @@ body{
 .password-display{
     position:absolute !important;
 
-    top:51% !important;
+    top:55% !important;
     left:50% !important;
 
     width:auto !important;
 
     transform:translateX(-50%) !important;
+
+    color:white !important;
 
     font-size:1.05rem !important;
     letter-spacing:5px !important;
@@ -455,7 +457,7 @@ body{
 .keypad{
     position:absolute !important;
 
-    top:57% !important;
+    top:62% !important;
     left:50% !important;
 
     width:auto !important;
@@ -479,6 +481,8 @@ body{
     height:40px !important;
 
     margin:0 !important;
+
+    color:white !important;
 
     font-size:.95rem !important;
 }
