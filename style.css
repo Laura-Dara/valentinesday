@@ -477,3 +477,35 @@ body{
         transform:scale(1) rotate(0);
     }
 }
+
+/* Ajuste final da tela de senha */
+
+.password-display{
+    top:49% !important;
+    font-size:1.15rem !important;
+    letter-spacing:5px !important;
+}
+
+.keypad{
+    top:56% !important;
+    bottom:auto !important;
+
+    display:grid !important;
+    grid-template-columns:repeat(3,40px) !important;
+
+    justify-content:center !important;
+
+    column-gap:16px !important;
+    row-gap:7px !important;
+
+    padding:0 !important;
+}
+
+.keypad button{
+    width:40px !important;
+    height:40px !important;
+
+    margin:0 !important;
+
+    font-size:.95rem !important;
+}
