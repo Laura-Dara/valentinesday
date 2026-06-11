@@ -28,7 +28,7 @@ body{
 
 .password-display{
     position:absolute;
-    top:55%;
+    top:46%;
     width:100%;
 
     display:flex;
@@ -37,7 +37,7 @@ body{
 
     color:white;
 
-    font-size:1.5rem;
+    font-size:1.4rem;
     letter-spacing:4px;
 
     z-index:10;
@@ -47,21 +47,24 @@ body{
 
 .keypad{
     position:absolute;
-    bottom:55px;
+    top:54%;
     width:100%;
 
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:8px;
+    grid-template-columns:repeat(3,48px);
+justify-content:center;
 
-    padding:0 85px;
+    column-gap:18px;
+    row-gap:8px;
+
+    padding:0;
 }
 
 .keypad button{
-    width:48px;
-    height:48px;
+    width:46px;
+    height:46px;
 
-    margin:auto;
+    margin:0;
 
     border:none;
     border-radius:50%;
@@ -71,7 +74,7 @@ body{
 
     color:white;
 
-    font-size:1.1rem;
+    font-size:1.05rem;
     font-weight:300;
 
     transition:.15s;
